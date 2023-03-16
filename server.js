@@ -13,7 +13,7 @@ const server = express();
 server.use(authMiddleware);
 
 // Define a route for the root URL
-server.get("/", (req, res, next) => {
+server.get("/", (req, res) => {
   logger.info("Hello World");
   res.status(200).send("Logging Hello World..");
 });
